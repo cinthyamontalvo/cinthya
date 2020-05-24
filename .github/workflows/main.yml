@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:   
     - uses: actions/checkout@v2  
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Saludar
+      run: echo Hola cuando hace push!
+    - name: docker
+      run: docker -v
+    - name: build image
+      run: docker build . -t cinthyamontalvo/gitactnodeimage:240520
+    - name: list image
+      run: docker images
+
