@@ -19,7 +19,7 @@ jobs:
     - name: list image
       run: docker images
     - name: running images
-      run: docker run cinthyamontalvo/gitactnodeimage:240520
+      run: docker run -d cinthyamontalvo/gitactnodeimage:240520
     - name: listing containers
       run: docker ps -a
 
