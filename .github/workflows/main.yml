@@ -23,7 +23,7 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER }} 
         DOCKER_PASS: ${{ secrets.DOCKER_PASS }} 
       run: |
-        echo: 'Docker login'
+        echo 'Docker login'
         docker login -u $DOCKER_USER -p $DOCKER_PASS
-        echo: 'Sending to hub'
+        echo 'Sending to hub'
         docker push cinthyamontalvo/gitactnodeimage:240520
