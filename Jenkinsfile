@@ -78,7 +78,7 @@ pipeline{
 
                 echo 'ejecuntado un email'
 
-                mail bcc: '', body: 'Hola desde mi pipeline'
+                //mail bcc: '', body: 'Hola desde mi pipeline'
 
             }
 
