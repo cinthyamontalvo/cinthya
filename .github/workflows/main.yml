@@ -18,8 +18,12 @@ jobs:
       run: docker build . -t cinthyamontalvo/gitactnodeimage:240520
     - name: list image
       run: docker images
-    - name: running images
-      run: docker run -d cinthyamontalvo/gitactnodeimage:240520
-    - name: listing containers
-      run: docker ps -a
-
+    - name: pushing to docker hub
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }} 
+        DOCKER_PASS: ${{ secrets.DOCKER_PASS }} 
+      run: |
+        echo: 'Docker login'
+        docker login -u $DOCKER_USER -P $DOCKER_PASS
+        echo: 'Sending to hub'
+        docker push cinthyamontalvo/gitactnodeimage:240520
