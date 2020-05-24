@@ -18,4 +18,8 @@ jobs:
       run: docker build . -t cinthyamontalvo/gitactnodeimage:240520
     - name: list image
       run: docker images
+    - name: running images
+      run: docker run cinthyamontalvo/gitactnodeimage:240520
+    - name: listing containers
+      run: docker ps -a
 
